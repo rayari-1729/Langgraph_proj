@@ -45,7 +45,14 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Install dependencies:
+3. Install dependencies using uv (recommended):
+```bash
+uv pip install -r requirements.txt
+# OR use the locked dependencies for exact versions
+uv pip install --requirements uv.lock
+```
+
+Alternatively, using pip:
 ```bash
 pip install langgraph
 ```
@@ -82,10 +89,4 @@ python agents/04.py  # Try the conditional edges agent
 - Progressive hints from general to specific
 - Helps students learn problem-solving strategies
 
-## Contributing
 
-Feel free to open issues or submit pull requests with improvements.
-
-## License
-
-MIT License
